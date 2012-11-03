@@ -1,0 +1,34 @@
+
+
+this project is to help the team to work more efficient.
+
+user:
+1. system admin
+2. Projects owner. 
+3. group member
+======================
+function 
+  project
+  task
+
+1. system admin function
+  1. add,delete,update  Project owner
+  
+2. Projects owner
+  1. manage subject project
+      manage project
+      manage groups
+
+  2. manage group 
+      group leader 
+      group member
+  
+3.group member 
+   
+
+-------------
+task
+   1. create task  (below project (subproject), title, description, type, plan to do , target day, request by,
+   2. 
+
+  

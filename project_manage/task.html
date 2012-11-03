@@ -1,0 +1,147 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Task Management List</title>
+    <style type="text/css" media="screen">
+        ul,li {padding:0px; margin:0px;}
+        li {list-decorate:none; float:left; margin: 0px 10px; }
+
+        ul.menu {background:#A2C6E2; height:30px; with:auto;}
+        ul li.item {margin:3px 10px; padding:3px;}
+        ul li.item:hover {background:white; }
+
+        table {border-collapse:collapse}
+        table,form {display:none;}
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+        <li class="item">Projects</li>
+        <li class="item">Task</li>
+        <li class="item">Contact</li>
+        <li class="item">Trace</li>
+        <li class="item">Notes</li>
+    </ul>
+
+
+    <table border="1" cellpadding="10" >
+        <caption>My task List</caption>
+
+        <tr><th>Time</th><th>Status</th><th>From</th><th>Title</th><th>Operation</th></tr>
+        <tr><td>10-28 12:30</td><td>Unread</td><td>Mary</td><td>update rewrite rule file on cd577</td>
+        <td><select>
+                <option value="1">Read</option>
+                <option value="2">Read&Start</option>
+                <option value="3">Transfer to</option>
+                <option value="4">Work with</option>
+                <option value="5">Done</option>
+                <option value="5">UnDone</option>
+            </select> </td></tr>
+            
+            <tr><td>10-28 12:30</td><td>Unread</td><td>Lily</td><td>raise a CO for updating rewrite rule file on cd577</td>
+        <td><select>
+                <option value="1">Read</option>
+                <option value="2">Read&Start</option>
+                <option value="3">Transfer to</option>
+                <option value="4">Work with</option>
+                <option value="5">Done</option>
+                <option value="5">UnDone</option>
+            </select> </td></tr>
+    </table>
+
+
+    <table border="1" cellpadding="10" >
+        <caption>User infomation</caption>
+        <tr><th>Staff Id</th><td>40125121</th></tr>
+        <tr><th>Nick name</th><td>Lily</th></tr>
+        <tr><th>Lotus Notes</th><td>Lily l zhang/HSDC/HSBC</th></tr>
+        <tr><th>Ext</th><td>85212</th></tr>
+        <tr><th>Join date</th><td>2010-10-5</th></tr>
+        <tr><th>Group</th><td>GPL deployment GLTc</td></tr>
+        <tr><th>Group Leader</th><td>Simon x chen/HSCC/HSBC</td></tr>
+    </table>
+
+    <form action="" method="get" accept-charset="utf-8" onsubmit="console.log(this.form);return false;">
+        <input type="radio" name="some_name" value="1">Lily
+        <input type="radio" name="some_name" value="2">Mary
+        <input type="radio" name="some_name" value="3">Tom
+        <input type="submit" value="Continue">
+    </form>
+
+    <form action="" method="get" accept-charset="utf-8" onsubmit="console.log(this.form);return false;" cellpadding="10" >
+        <input type="checkbox" name="some_name" value="1">Lily
+        <input type="checkbox" name="some_name" value="2">Mary
+        <input type="checkbox" name="some_name" value="3">Tom
+        <input type="submit" value="Continue">
+    </form>
+
+    <!-- Trace -->
+    <form action="" method="get" accept-charset="utf-8" >
+    <br/>
+    <table border="1" cellpadding="4" >
+        <caption>Need to Trace -- Filter</caption>
+            Filter&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="type" value="1">Project1 
+            <input type="radio" name="type" value="2">Project2 
+            <input type="radio" name="type" value="3">Project3&nbsp;&nbsp; &nbsp;&nbsp;
+            <input type="checkbox" name="some_name" value="1">Lily&nbsp;&nbsp;
+            <input type="checkbox" name="some_name" value="2">Mary&nbsp;&nbsp;
+            <input type="checkbox" name="some_name" value="3">Tom&nbsp;&nbsp;
+            <hr/>
+            <input type="radio" name="sortby" value="1">sort by target day
+            
+
+            <p><input type="reset" value="Reset"><input type="submit" value="Filter"></p>
+    </table>
+    </form>
+
+
+    <table border="1" cellpadding="4" >
+        <caption>Need to Trace -- Eating</caption>
+        <tr><th>Seq</th><th>No.</th><th>who</th><th>Create date</th><th>target date</th><th>Project</th><th>description</th></tr>
+        <tr><td>1</td><td>3222312</td><td>Peter</td><td>10-24 12:30</td><td>11-01 12:00</td><td>Project1</td><td>use for create user account</td></tr>
+        <tr><td>2</td><td>3222313</td><td>Peter</td><td>10-24 12:30</td><td>11-01 12:00</td><td>Project1</td><td>use for create user account</td></tr>
+    </table>
+
+    <br/>
+    <table border="1" cellpadding="4" >
+        <caption>Need to Trace -- Drink</caption>
+        <tr><th>Seq</th><th>No.</th><th>who</th><th>Create date</th><th>target date</th><th>Project</th><th>description</th></tr>
+        <tr><td>1</td><td>3222312</td><td>Peter</td><td>10-24 12:30</td><td>11-01 12:00</td><td>Project1</td><td>use for create user account</td></tr>
+        <tr><td>2</td><td>3222313</td><td>Tom</td><td>10-24 12:30</td><td>11-01 12:00</td><td>Project3</td><td>use for create user account</td></tr>
+        <tr><td>3</td><td>3222311</td><td>Peter</td><td>10-24 12:30</td><td>11-01 12:00</td><td>Project2</td><td>use for create user account</td></tr>
+    </table>
+
+
+    <table border="1" cellpadding="4" >
+        <caption>Note</caption>
+        <tr><th>Seq</th><th>No.</th><th>who</th><th>Create date</th><th>Tag</th><th>description</th></tr>
+        <tr><td>1</td><td>32</td><td>Peter</td><td>10-24 12:30</td><td>ticket</td><td>use for create user account</td></tr>
+    </table>
+    
+
+    <!-- Trace -->
+    <form action="" method="get" accept-charset="utf-8" style="display:block;">
+        <table border="1" style="display:block">
+            <caption>Add Task</caption>
+            <tr><th>Start Date</th><td><input type="date" name="start_date" value=today></td></tr>
+            <tr><th>Target Date</th><td><input type="date" name="target_date"></td></tr>
+            <tr><th>Assign To</th><td><input type="text" name="who"></td></tr>
+            <tr><th>Title</th><td><input type="text" name="title"></td></tr>
+            <tr><th>Description</th><td><input type="text" name="description"></td></tr>
+        </table>
+    </form>
+
+    <br/>
+    <table border="1" cellpadding="4" style="display:block;">
+        <caption>My Task</caption>
+        <tr><th>Seq</th><th>Start Date</th><th>Target Date</th><th>Assign From</th><th>Status</th><th>Title</th><th>Description</th><th>Log</th></tr>
+        <tr><td>1</td><td>10-12 12:30</td><td>12-20 12:00</td><td>Wendy</td><td>Unread</th><td>raise a CO to update rewrite rule file</td><td>xx</td><td>10</td></tr>
+        <tr><td>2</td><td>10-12 12:30</td><td>12-20 12:00</td><td>Wendy</td><td>Unread</th><td>raise a CO to update rewrite rule file</td><td>xx</td><td>10</td></tr>
+        <tr><td>3</td><td>10-12 12:30</td><td>12-20 12:00</td><td>Wendy</td><td>Unread</th><td>raise a CO to update rewrite rule file</td><td>xx</td><td>10</td></tr>
+        <tr><td>4</td><td>10-12 12:30</td><td>12-20 12:00</td><td>Wendy</td><td>Unread</th><td>raise a CO to update rewrite rule file</td><td>xx</td><td>10</td></tr>
+    </table>
+
+    
+</body>
+</html>
