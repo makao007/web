@@ -4,7 +4,7 @@
     <title>Task Management List</title>
     <style type="text/css" media="screen">
         ul,li {padding:0px; margin:0px;}
-        li {list-decorate:none; float:left; margin: 0px 10px; }
+        li {list-decorate:none; list-style-type:none; float:left; margin: 0px 10px; }
 
         ul.menu {background:#A2C6E2; height:30px; with:auto;}
         ul li.item {margin:3px 10px; padding:3px;}
@@ -121,8 +121,8 @@
     
 
     <!-- Trace -->
-    <form action="" method="get" accept-charset="utf-8" style="display:block;">
-        <table border="1" style="display:block">
+    <form action="" method="get" accept-charset="utf-8" >
+        <table border="1" >
             <caption>Add Task</caption>
             <tr><th>Start Date</th><td><input type="date" name="start_date" value=today></td></tr>
             <tr><th>Target Date</th><td><input type="date" name="target_date"></td></tr>
@@ -133,7 +133,7 @@
     </form>
 
     <br/>
-    <table border="1" cellpadding="4" style="display:block;">
+    <table border="1" cellpadding="4" >
         <caption>My Task</caption>
         <tr><th>Seq</th><th>Start Date</th><th>Target Date</th><th>Assign From</th><th>Status</th><th>Title</th><th>Description</th><th>Log</th></tr>
         <tr><td>1</td><td>10-12 12:30</td><td>12-20 12:00</td><td>Wendy</td><td>Unread</th><td>raise a CO to update rewrite rule file</td><td>xx</td><td>10</td></tr>
@@ -142,6 +142,16 @@
         <tr><td>4</td><td>10-12 12:30</td><td>12-20 12:00</td><td>Wendy</td><td>Unread</th><td>raise a CO to update rewrite rule file</td><td>xx</td><td>10</td></tr>
     </table>
 
+
+    <!-- project -->
+    <form action="" method="get" accept-charset="utf-8" style="display:block">
+     <table border="1" style="display:block">
+         <caption>Add project</caption>
+         <tr><th>Project Name</th><td><input type="text" name="project-name"></td></tr>
+         <tr><th>Parent Project</th><td><select value="root"><option name="parent-project">/</option></select></td></tr>
+         <tr><td colspan="2"><input type="submit" value="Create Project"></td></tr>
+     </table>
+    </form>
     
 </body>
 </html>

@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Search</title>
+    <script>
+        f23={};
+        f23.ts="8ABC7DLO5MN6Z9EFGdeJfghijkHIVrstuvwWSTUXYabclmnopqKPQRxyz01234";
+
+        f23.s52d=function(n)
+        {
+            var c=n.charAt(0)*1;
+            if(isNaN(c))return "";
+            c=n.substr(1,c)*1;
+            if(isNaN(c))return "";
+            var nl=n.length,t=[],a,f,b,x=String(c).length+1,m=function(y){return f23.ts.indexOf(n.charAt(y))},N=f23.ts.length;
+            if(nl!=x+c)return "";
+            while(x<nl)
+            {
+                a=m(x++);
+                if(a<5)f=a*N+m(x);
+                else f=(a-5)*N*N+m(x)*N+m(x+=1);
+                t[t.length]=String.fromCharCode(f);
+                x++;
+            }
+            return t.join("");
+        }
+
+        function show (content) {return f23.s52d(content); }
+
+    </script>
+</head>
+<body>
+    <form action="" method="get" accept-charset="utf-8" >
+        <center><p><input type="text" name="word" value="" style="width:400px; height:33px; font-size:17px;"><input type="submit" value="Search" style="width: 90px; height: 32px; font-size: 17px; border: 1px solid #AAA; background-color: #F3F3FE;" ></p></center>
+        <input type="hidden" name="count" value="20">
+        <input type="hidden" name="page" value="1">
+    </form>
+
+
+<?php
+function make_url($name,$page,$account) {
+    var $word='';
+    var 
+    var $url="http://www.google.com.hk/search?q=$word&hl=zh-CN&start=$num";
+
+}
+
+function get_content ($url) {
+    if (! $url) 
+        return '';
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:'));
+    curl_setopt($ch, CURLOPT_TIMEOUT, 120);
+    curl_setopt($ch, CURLOPT_MAXREDIRS, 5);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    @curl_setopt($ch, CURLOPT_FOLLOWLOCATION , true);
+    return curl_exec($ch);
+}
+
+function filter_result ($content) {
+    if (! $content) 
+        return '';
+}
+
+
+var $name=$_GET["word"];
+var $page=$_GET["page"];
+var $account = $_GET["account"];
+
+
+var $url = make_url ($name,$page,$account);
+
+var $content = get_content($url);
+
+var $result = filter_result ($content);
+
+echo $result;
+
+?>
+</body>
+</html>
