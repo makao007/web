@@ -1,4 +1,7 @@
 {
+   "manifest_version": 2,
+   "name": "Google Search Redirect Reset Remove V2",
+   "version" : "0.1",
    "content_scripts": [ {
       "exclude_globs": [  ],
       "include_globs": [ "*.google.*" ],
@@ -8,7 +11,5 @@
    } ],
    "converted_from_user_script": true,
    "description": "Remove Reset Js From www.nowamagic.net. Remove the redirect url from google search result",
-   "key": "/I5ObkPmtqJr7G3p2qoljciswIkK2WdKBPes0KlQiZw=",
-   "name": "Google Search Redirect Reset Remove V2",
-   "version": "1.0"
+   "key": "/I5ObkPmtqJr7G3p2qoljciswIkK2WdKBPes0KlQiZw="
 }
