@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<style>
+	.little_font {font-size:10px; font-weight:normal; color:rgb(73, 151, 107);}
+	.small_font {font-size:12px; font-weight:normal;}
+	.middle_font {font-size:14px; font-weight:normal;}
+	.person_font {font-size:14px; margin-right:5px;}
+	.right {float:right;}
+	p {color:black;}
+	.reply {margin-left:20px;}
+	.my_dialog{background-color:#90d46e; border-radius: 5px ;box -shadow: 0 10px 20px #666 ; text-align: center ;font-size: 14px ; color:#000; padding:10px;} 
+	ul li {list-style-type:none;}
+	.my_line {margin-bottom:20px;}
+	.box2{
+		display:inline-block;
+		margin-top: 0px;
+		width: 0px;
+		height: 0;
+		border-top: 0px solid #F1F1F1;
+		border-right: 20px solid #90d46e;
+		border-bottom: 20px solid #F1F1F1;
+		border-left: 0px solid #F1F1F1;
+	}
+
+	</style>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>My Title</h1>
+	</div><!-- /header -->
+	<div data-role="content">	
+		<p>移动小助手--论坛 > 品牌讨论 </p>
+		<hr/>
+		<p>Google 7.5亿美元收购联想5.7%的股份</p>
+		<p>2014-01-27 12:00  by 老陈</p>
+		
+		<div style="width:100%; line-height: 30px; color:rgb(51, 51, 51); font-size:13px; margin-bottom:20px;">
+			亲们，看到这个标题是不是有点懵了，是不是有点摸不着头脑呢。嘿嘿，你没看错，是OPPO R1，不是OPPO N1！
+是的，估计有聪明的亲已经猜到了吧，OPPO又要发布新款手机了。N1才刚发售没几天，OPPO又曝出新机照片。OPPO，你能慢点走吗，我都有点跟不上你的节奏了。
+点击查看原图  <br/>
+官方称，下一代的OPPO R1智能手机，将会主打夜拍功能，全新的图像处理系统将会使每一张的图片色彩更加真实，堪称新一代夜拍神器。在外观方面，R1将采用全镜面机身设计。
+OPPO官微刚曝光出R1的照片时，看起来像是蓝色的机子，之后网上有说会有黑色和白色两种颜色供大家选择。全镜面机身是经过42道工序用强化玻璃精制而成的，所以那些对玻璃抗压程度存有疑虑的童鞋完全不用担心。R1这次还将全息镜面和铝镁合金中框相结合，使机子整体看起来更庄重大气。
+		<br/>
+		<span><a href="#">顶</a>  (21)</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#">回复</a> (5) </span>
+		</div>
+		
+		
+		<ul data-role="listview" >
+			<li><span class="person_font">小红:</span><span class="middle_font">联想的笔记本不错！</span><span class="small_font"> (24分钟前)
+				<div class="right little_font"><span>顶(79)</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>回复</span></div>
+			</li>
+			<li><span class="person_font">老陈:</span><span class="middle_font">这个价有点高了</span><span class="small_font"> (24分钟前)
+				<div class="right little_font"><span>顶(79)</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>回复</span></div>
+			</li>
+			<li><span class="person_font reply">红太狼:</span><span class="middle_font">这个收购很划算</span><span class="small_font"> (24分钟前)
+				<div class="right little_font"><span>顶(79)</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>回复</span></div>
+			</li>
+			<li><span class="person_font">超人不加油:</span><span class="middle_font">这个收购很划算</span><span class="small_font"> (24分钟前)
+				<div class="right little_font"><span>顶(79)</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>回复</span></div>
+			</li>
+		</ul>
+		<br/>
+		<ul>
+			<li class="my_line"><span style="margin-right:6px; ">喜羊羊</span><div class="box2">&nbsp;&nbsp;</div><span class="my_dialog">我们要举办一个村运动会</span></li>
+			<li class="my_line"><span style="margin-right:6px; ">美羊羊</span><div class="box2">&nbsp;&nbsp;</div><span class="my_dialog">我要参加长跑</span></li>
+			<li class="my_line reply"><span style="margin-right:6px; ">沸羊羊</span><div class="box2">&nbsp;&nbsp;</div><span class="my_dialog">你行么？</span></li>
+			<li class="my_line reply"><span style="margin-right:6px; ">美羊羊</span><div class="box2">&nbsp;&nbsp;</div><span class="my_dialog">当然</span></li>
+		<br/>
+		<textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="我也说一句"></textarea>
+		<!--   <button class="ui-btn ui-btn-inline ui-mini" >发表</button>   -->
+		
+	</div><!-- /content -->
+	<div data-role="footer">
+		<p>This is footer</p>
+	</div>
+
+</div><!-- /page -->
+
+</body>
+</html>
