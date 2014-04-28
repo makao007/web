@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;auto_gene/user/gene/user_add.html&apos;" deleteContents="false" description="Delete resource &apos;auto_gene/user/gene/user_add.html&apos;" element1="/auto_gene/user/gene/user_add.html" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1395759072903"/>&#x0A;<refactoring comment="Delete resource &apos;auto_gene/user/gene/user_edit.html&apos;" deleteContents="false" description="Delete resource &apos;auto_gene/user/gene/user_edit.html&apos;" element1="/auto_gene/user/gene/user_edit.html" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1395765221642"/>
+</session>

@@ -1,0 +1,30 @@
+import web
+urls = (
+    "/", "hello",
+    '/t', 't',
+)
+
+app = web.application(urls, globals())
+
+if web.config.get('_session') is None:
+    session = web.session.Session(app, web.session.DiskStore('sessions'), {'count': 0})
+    web.config._session = session
+else:
+    session = web.config._session
+
+class hello:
+   def GET(self):
+       print 'session', session
+       session.count += 1
+       return 'Hello, %s!' % session.count
+   
+def get_name():
+    return session.count
+   
+class t :
+    def GET(self):
+        name = get_name()
+        return 'name %s %s' %  (name, web.ctx.get('path'))
+
+if __name__ == "__main__":
+   app.run()
