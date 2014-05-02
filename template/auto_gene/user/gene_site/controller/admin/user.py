@@ -38,7 +38,7 @@ class user_list:
         index  = int(index)
         length = int(length)
         
-        fields = [  'user_name',  'user_code',  'user_password',  'user_sex',  'user_tel',  'user_role',  ]
+        fields = [  'user_name',  'user_code',  'user_password',  'user_sex',  'user_tel',  'user_role',  'user_id',  'user_create_time',  'user_create_user',  'user_update_time',  'user_update_user',  'user_valid',  ]
         cond = {}
         data = {}
         data['filter'] = {}
@@ -53,7 +53,7 @@ class user_list:
         
         data["records"]   = data_list
         data['next_page'] = next_page (index, length, data_len)
-        
+        data['show_confirm'] = web.input().get('show_confirm','')
         return render ('admin/user_list.html', item=data)
 
 
@@ -101,8 +101,8 @@ class user_edit:
         xid  = int(xid)
         
         request = web.input()
-        input_fields = [  'user_name',  'user_code',  'user_password',  'user_sex',  'user_tel',  'user_role',  ]
-        nonul_fields = [   'user_name',    'user_code',    'user_password',        'user_role',   ]   #user input fileds, can not be emtpy
+        input_fields = [   'user_name',    'user_code',    'user_password',    'user_sex',    'user_tel',    'user_role',               ]
+        nonul_fields = [   'user_name',    'user_code',    'user_password',        'user_role',               ]   #user input fileds, can not be emtpy
         
         #检查用户是否有权限
         if xid!=0 and not check_right (xid):
@@ -111,23 +111,22 @@ class user_edit:
         
         #检查是否存在 不能为空的字段 输入为空
         if not self.check_input (request, nonul_fields):
-            print 'try to edit data, but found some not-null parameter null'
+            print 'try to edit data, but found some not-null parameter null, table: %s'  % 'user'
             return default_error('some parameter empty')
         
         data = {}
+        
         if xid==0:   #new record
             print 'add new record into database for table user'
             data["id"] = 0
-            data['create_time'] = get_date()
-            data['create_user'] = get_user()
+            data['create_time'] = get_date(); data['create_user'] = get_user()
         else:
             print 'update record into database for table user'
             data = m_user.get_one ( ** {'id': xid})
             if not data:
                 print 'try to update record into database, but fail'
                 raise web.notfound()
-            data['update_time'] = get_date()
-            data['update_user'] = get_user()
+            data['update_time'] = get_date(); data['update_user'] = get_user()
         for field in input_fields:
             new_field = field.replace('user_','',1)
             data[new_field] = request.get(field,'')

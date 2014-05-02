@@ -38,7 +38,7 @@ class publisher_list:
         index  = int(index)
         length = int(length)
         
-        fields = [  'publisher_name',  'publisher_address',  'publisher_tel',  ]
+        fields = [  'publisher_name',  'publisher_address',  'publisher_tel',  'publisher_id',  'publisher_create_time',  'publisher_create_user',  'publisher_update_time',  'publisher_update_user',  'publisher_valid',  ]
         cond = {}
         data = {}
         data['filter'] = {}
@@ -53,7 +53,7 @@ class publisher_list:
         
         data["records"]   = data_list
         data['next_page'] = next_page (index, length, data_len)
-        
+        data['show_confirm'] = web.input().get('show_confirm','')
         return render ('admin/publisher_list.html', item=data)
 
 
@@ -101,8 +101,8 @@ class publisher_edit:
         xid  = int(xid)
         
         request = web.input()
-        input_fields = [  'publisher_name',  'publisher_address',  'publisher_tel',  ]
-        nonul_fields = [   'publisher_name',    'publisher_address',    'publisher_tel',   ]   #user input fileds, can not be emtpy
+        input_fields = [   'publisher_name',    'publisher_address',    'publisher_tel',               ]
+        nonul_fields = [   'publisher_name',    'publisher_address',    'publisher_tel',               ]   #user input fileds, can not be emtpy
         
         #检查用户是否有权限
         if xid!=0 and not check_right (xid):
@@ -111,30 +111,29 @@ class publisher_edit:
         
         #检查是否存在 不能为空的字段 输入为空
         if not self.check_input (request, nonul_fields):
-            print 'try to edit data, but found some not-null parameter null'
+            print 'try to edit data, but found some not-null parameter null, table: %s'  % 'publisher'
             return default_error('some parameter empty')
         
         data = {}
+        
         if xid==0:   #new record
             print 'add new record into database for table publisher'
             data["id"] = 0
-            data['create_time'] = get_date()
-            data['create_user'] = get_user()
+            data['create_time'] = get_date(); data['create_user'] = get_user()
         else:
             print 'update record into database for table publisher'
             data = m_publisher.get_one ( ** {'id': xid})
             if not data:
                 print 'try to update record into database, but fail'
                 raise web.notfound()
-            data['update_time'] = get_date()
-            data['update_user'] = get_user()
+            data['update_time'] = get_date(); data['update_user'] = get_user()
         for field in input_fields:
             new_field = field.replace('publisher_','',1)
             data[new_field] = request.get(field,'')
         
         #if xid=0 then add   ;  otherwise  update
         m_publisher.upsert ("id",**data)
-        return web.seeother('/admin/public'+"_list")
+        return web.seeother('/admin/publisher'+"_list")
 
 
 class publisher_delete:
@@ -146,5 +145,5 @@ class publisher_delete:
             print 'try to delete an unauthrithm data, %s record id:%s , user id:%s'  %  ('publisher',xid, get_user())
             raise web.notfound()
         m_publisher.delete (**{"id":xid})
-        return web.seeother('/admin/public' + '_list')
+        return web.seeother('/admin/publisher' + '_list')
         

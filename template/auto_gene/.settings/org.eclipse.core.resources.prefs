@@ -1,6 +1,4 @@
 eclipse.preferences.version=1
-encoding//user/gene/controller/user.py=utf-8
-encoding//user/gene_page.py=utf-8
 encoding//user/gene_site/_gene_/gene.py=utf-8
 encoding//user/gene_site/_gene_/templates/tpl_model.py=utf-8
 encoding//user/gene_site/_gene_/templates/tpl_view.py=utf-8
@@ -19,8 +17,3 @@ encoding//user/gene_site/model/db.py=utf-8
 encoding//user/gene_site/model/tables.py=utf-8
 encoding//user/gene_site/urls.py=utf-8
 encoding//user/gene_site/utils.py=utf-8
-encoding//user/template/book.py=utf-8
-encoding//user/template/load_schema.py=utf-8
-encoding//user/template/schema.py=utf-8
-encoding//user/template/tpl_view.py=utf-8
-encoding//user/utils.py=utf-8
