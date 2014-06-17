@@ -19,6 +19,9 @@
 			
 			#nav>ul>li:hover ul{display:block}
 			#nav>ul>li>a:hover {color:white; background-color:#4d2b64; display:block; }
+			
+			#nav>ul>li>ul>li>ul {display:none;}
+			#nav>ul>li>ul>li:hover ul{display:block;}
 			#nav>ul>li>ul>li>a:hover {color:white; background-color:#4d2b64; display:block;}
 			
 			#main {position:absolute; top:0px; left:0px; width:100%; z-index:1000;}
@@ -34,6 +37,8 @@
 			#footer {position: relative; clear:both;}
 			
 
+			
+
 		</style>
 	</head>
 	<body>
@@ -47,7 +52,14 @@
 					<li>
 						<a href="#">¾ÆµêÔ¤¶©</a>
 						<ul >
-							<li><a href="#">²¬Öý·ÆÅµ</a></li>
+							<li>
+								<a href="#">²¬Öý·ÆÅµ</a>
+								<ul>
+									<li><a href="²¬Öý·ÆÅµ1" >²¬Öý·ÆÅµ1</a></li>
+									<li><a href="²¬Öý·ÆÅµ1" >²¬Öý·ÆÅµ2</a></li>
+									<li><a href="²¬Öý·ÆÅµ1" >²¬Öý·ÆÅµ3</a></li>
+								</ul>
+							</li>
 							<li><a href="#">¼ª·Æ¾Æµê</a></li>
 							<li><a href="#">ZMAX¾Æµê</a></li>
 							<li><a href="#">ÆßÌì¾Æµê</a></li>

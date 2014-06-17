@@ -1,0 +1,47 @@
+<script src="jquery.js"></script>
+<script src="unslider.js"></script>
+
+<style>
+.banner { position: relative; overflow: auto; }
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+</style>
+
+<div class="banner">
+    <ul>
+        <li>This is a slide.</li>
+        <li>This is another slide.</li>
+        <li>This is a final slide.</li>
+    </ul>
+</div>
+
+
+<script>
+
+
+var slidey = $('.banner').unslider(),
+    data = slidey.data('unslider');
+
+//  Start Unslider
+data.start();
+
+//  Pause Unslider
+data.stop();
+
+//  Move to a slide index, with optional callback
+data.move(2, function() {});
+//  data.move(0);
+
+//  Manually enable keyboard shortcuts
+data.keys();
+
+//  Move to the next slide (or the first slide if there isn't one)
+data.next();
+
+//  Move to the previous slide (or the last slide if there isn't one)
+data.prev();
+
+//  Append the navigation dots manually
+data.dots();
+
+</script>
