@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, 
+            initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, 
+            user-scalable=no">
+        <title>模仿Framework7</title>
+        <link href="favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="css/app.css">
+        <style type="text/css">
+            html, body {margin:0px; padding:0px; font-family: 'Microsoft Yahei', Tahoma, Simsun;}
+            body {background: #EFEFF4;}
+            #nav {background: #F7F7F8; color:#000; border-bottom:1px solid #C4C4C4; width:100%; height:43px; position:fixed; left:0px; top:0px; z-index:2; overflow:hidden;}
+            #nav a {height:43px;  line-height:43px;  width:33.3%;  display:block; float:left; }
+            #nav a:first-child {text-align:left; }
+            #nav a:last-child {text-align:right; }
+            
+            
+            #main {color:#000; padding:0px; font-size:14px; color:#6D6D72; padding-top:43px; padding-bottom:45px; }
+            #main .block {background:#fff; padding:5px 10px; border-bottom: 1px solid #C8C7CC; border-top: 1px solid #C8C7CC; color:#000;}
+            
+            #foot {border-top:1px solid #C4C4C4; height:45px; line-height:45px; clear:both; background-color:#F7F7F8; position:fixed;  left:0px; bottom:0px;  width:100%;}
+            #foot div {display:inline;}
+            #foot div:first-child{float:left;}
+            #foot div:last-child {float:right;}
+            
+            
+            #box {display:flex;}
+            #box div:first-child{text-align:left;}
+            #box div:last-child{text-align:right;}
+            
+            #box2 div:first-child {float:left;}
+            #box2 div:last-child {flaot:right;}
+            #box2 div:nth-child(2) {float:center; }
+            
+            
+            ul,li {margin:0px; padding:0px; list-style-type:none;}
+            ul {background:#fff;  border-top:1px solid #C8C7CC;  border-bottom:1px solid #C8C7CC;}
+            ul li {height:45px; line-height:45px; border-bottom:1px solid #C8C7CC; margin-left:10px; color:#000;}
+            ul li:last-child {border:none; }
+            
+            .icon {
+                vertical-align: middle;
+                background-size: 100% auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                font-style: normal;
+                position: relative;
+            }
+            
+            .li_icon {
+                padding-right: 35px;
+                background: no-repeat -webkit-calc(100% - 15px) center;
+                background: no-repeat -moz-calc(100% - 15px) center;
+                background: no-repeat calc(100% - 15px) center;
+                background-image: url("data:image/svg+xml;charset=utf-8,<svg viewBox='0 0 60 120' xmlns='http://www.w3.org/2000/svg'><path d='m60 61.5-38.25 38.25-9.75-9.75 29.25-28.5-29.25-28.5 9.75-9.75z' fill='%23c7c7cc'/></svg>");
+                background-size: 10px 20px;
+            }
+            
+            .icon_menu {
+                background: no-repeat -webkit-calc(100% - 15px) center;
+                background: no-repeat -moz-calc(100% - 15px) center;
+                background: no-repeat calc(100% - 15px) center;
+                background-size: 20px 20px;
+                background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 26' fill='%23007aff'><rect width='4' height='4'/><rect x='8' y='1' width='34' height='2'/><rect y='11' width='4' height='4'/><rect x='8' y='12' width='34' height='2'/><rect y='22' width='4' height='4'/><rect x='8' y='23' width='34' height='2'/></svg>");
+            }
+            
+            .icon_back {
+                width: 12px;
+                height: 20px;
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+                background-position: 2px;
+                background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20'><path d='M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z' fill='%23007aff'/></svg>");
+                text-indent: 17px;
+            }
+            
+            .triangle {
+                display: inline-block;
+                margin-top: 0px;
+                width: 0px;
+                height: 0;
+                border-top: 0px solid #F1F1F1;
+                border-right: 20px solid #90D46E;
+                border-bottom: 20px solid #F1F1F1;
+                border-left: 0px solid #F1F1F1;
+            }
+            
+            .left {float:left;}
+            .right{float:right;}
+            .reply {border:1px solid #70B1F7; padding: 7px; border-radius: 10px; background:#C1DCFA; color:#000; }
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <a class="icon_back">&nbsp;Back</a>
+            <a >模仿Heading</a>
+            <a class="icon_menu">&nbsp;</a>
+        </div>
+        <div id="main">
+        
+            <div id="box">
+                <div style="flex:1;">Back</div>
+                <div style="flex:2;text-align:center;" >This is a Welcome Page</div>
+                <div style="flex:3;" class="icon_menu">More+</div>
+            </div>
+            
+            <div id="box2">
+                <div style="flex:1;">Back</div>
+                <div style="flex:2;text-align:center;" >This is a Welcome Page</div>
+                <div style="flex:3;">More+</div>
+            </div>
+            <p>WELCOME TO MY AWESOME APP</p>
+            <div class="block"><p>Couple of worlds here because my app is so awesome!</p>
+                                <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p></div>
+            <br/><br/>
+            <div><p>The quick brown fox jumps over the lazy dog</p></div>
+            
+            <ul>
+                <li class="li_icon">手机</li>
+                <li class="li_icon">笔记本</li>
+                <li class="li_icon">显示器</li>
+            </ul>
+            <br/>
+            
+            <div style="background-color:#fff;">
+                <div>
+                    <div class="left"><img src="header.gif"></div>
+                    <div style="margin-left:60px;">
+                        <span>GWill</span>
+                        <div class="reply">
+                            <span>官方称，下一代的OPPO R1智能手机，将会主打夜拍功能，全新的图像处理系统将会使每一张的图片色彩更加真实，堪称新一代夜拍神器。在外观方面，R1将采用全镜面机身设计。 OPPO官微刚曝光出R1的照片时，看起来像是蓝色的机子，之后网上有说会有黑色和白色两种颜色供大家选择。全镜面机身是经过42道工序用强化玻璃精制而成的，所以那些对玻璃抗压程度存有疑虑的童鞋完全不用担心。R1这次还将全息镜面和铝镁合金中框相结合，使机子整体看起来更庄重大气</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr/>
+            &copy;2014
+        </div>
+        
+        <div id="foot">
+            <div>Left</div>
+            <div>Right</div>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>
