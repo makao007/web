@@ -1,0 +1,309 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <title>My BackEnd Template</title>
+        <link rel="stylesheet" href="main.css">
+        <script src="jquery-1.11.0.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="wraper">
+            <div id="header">
+                <div id="header-left">
+                    <div><strong>Amaze UI</strong> 后台管理模板 (模仿)</div>
+                </div>
+                <div id="header-right">
+                    <div>收件箱<span class="mark-number">5</span></div>
+                    <div>管理员</div>
+                    <div>注销</div>
+                </div>
+            </div>
+            <div id="main">
+                <div id="main-left">
+                    
+                    <div id="main-left-menu">
+                        <ul>
+                            <li>首页</li>
+                            <li><a href="#">前台员工管理</a></li>
+                            <li><a href="#" onclick="$(this).next().toggle(400);" >基础商品数据<span class="expand">&gt;</span></a>
+                                <ul>
+                                    <li>基础数据1</li>
+                                    <li>基础数据2</li>
+                                    <li>基础数据3</li>
+                                    <li>基础数据4</li>
+                                </ul>
+                            </li>
+                            <li><a href="#" onclick="$(this).next().toggle(400);" >分店交易报表<span class="expand">&gt;</span></a>
+                                <ul>
+                                    <li>报表1</li>
+                                    <li>报表2</li>
+                                    <li>报表3</li>
+                                    <li>报表4</li>
+                                    <li>报表5</li>
+                                    <li>报表6</li>
+                                    <li>报表7</li>
+                                </ul>
+                            </li>
+                            <li>系统管理员</li>
+                            <li>系统日志</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div id="main-right">
+                    <div id="main-right-header" class="subtitle">表格 / <span>Table</span></div>
+                    
+                    <div id="main-right-main" >
+                        <div id="main-right-main-content">
+                        
+                        <div class="edit-menu">
+                            <ul>
+                                <li><a href="#">新增</a></li><li><a href="#">修改</a></li>
+                                <li><a href="#">删除</a></li>
+                                <li><a href="#">审核</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="search-menu">
+                            <form>
+                                <select name="s1">
+                                    <option>所有类别</option>
+                                    <option>汽车</option>
+                                    <option>财经</option>
+                                    <option>股票</option>
+                                </select>
+                                <select name="s2">
+                                    <option>所有作者</option>
+                                    <option>唐家三少</option>
+                                    <option>无坏蛋</option>
+                                </select>
+                                <input type="text" name="name"  placeholder="标题" style="width:200px; background-color:white;"><input type="submit" value="查询" >
+                            </form>
+                        </div>
+                        
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="xx"></th>
+                                    <th>ID</th>
+                                    <th>标题</th>
+                                    <th>类别</th>
+                                    <th>作者</th>
+                                    <th>修改日期</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>1</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td>
+                                        <div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>2</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td><div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>3</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td><div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>4</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td><div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>5</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td><div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>6</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td><div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>7</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td><div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>8</td>
+                                    <td>Business management</td>
+                                    <td>汽车</td>
+                                    <td>唐家三少</td>
+                                    <td>2014年3月2日 7:28:47</td>
+                                    <td><div>
+                                            <button class="editbtn">修改</button>
+                                            <button class="editbtn">删除</button>
+                                        </div></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        
+                        <p>共 15 条记录</p>
+                        <div class="page">
+                            <ul>
+                                <li><a href="#">首页</a></li>
+                                <li><a href="#">前一页</a></li>
+                                <li class="active"><a href="#">8</a></li>
+                                <li><a href="#">后一页</a></li>
+                                <li><a href="#">尾页</a></li>
+                            </ul>
+                        </div>
+                        
+                        <form action="" method="post" class="form hidden">
+                            <table>
+                                <tr>
+                                    <td><label>性别</label></td>
+                                    <td><span>男</span><input type="radio" name="sex" value="m" class="larger">&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span>女</span><input type="radio" name="sex" value="f" class="larger"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>财产</label></td>
+                                    <td><span>存款</span><input type="checkbox" name="property" value="m" class="larger">&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span>股票</span><input type="checkbox" name="property" value="m" class="larger">&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span>汽车</span><input type="checkbox" name="property" value="m" class="larger">&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span>房子</span><input type="checkbox" name="property" value="f" class="larger"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>学历</label></td>
+                                    <td>
+                                        <select name="level" class="larger">
+                                            <option>无学历</option>
+                                            <option>本科</option>
+                                            <option>研究生</option>
+                                            <option>博士</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label>姓名</label></td>
+                                    <td><input type="text" name="username" placeholder="姓名" class="textfield"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>电子邮件</label></td>
+                                    <td><input type="email" name="email" placeholder="电子邮件" class="textfield"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>电话</label></td>
+                                    <td><input type="text" name="tel" placeholder="电话" class="textfield"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>微博</label></td>
+                                    <td><input type="url" name="weibo" placeholder="微博" class="textfield"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>个人简介</label></td>
+                                    <td><textarea rows=3 class="textfield" placeholder="输入个人简介"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td><input type="button" value="保存修改" class="savebtn"></td>
+                                </tr>
+                            </table>
+                            
+                        </form>
+                        
+                        <pre class="code hidden">[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+[Tue Jan 11 17:32:52 2013] [error] [google 123.124.2.2] client denied by server: /export/home/macadmin/testdoc - no such file
+                        </pre>
+                        </div> <!--  / main-right-main-content -->
+                    </div> <!--  /  main-right-main -->
+                </div>
+                
+            </div>
+            <div id="footer">
+                <div>
+                    &copy; Maikao 2015 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
